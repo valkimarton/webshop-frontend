@@ -1,0 +1,35 @@
+#header_container {
+    background-color: aliceblue;
+}
+
+#logo_main, #header_navbars {
+    float: left;
+}
+
+#navbar_info {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.nav_info_item {
+    margin: 2em;
+}
+
+#navbar_shoes {
+    clear: left;
+    font-size: 3em;
+    text-align: center;
+}
+
+#cart_link {
+    float: right;
+    margin: 2em;
+}
+
+#random_h1 {
+    clear: left;
+}
+
+router-outlet {
+    clear: left;
+}

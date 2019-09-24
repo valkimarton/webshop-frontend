@@ -1,0 +1,11 @@
+
+<div id="product_list_container">
+    <h2>Shoes</h2>
+    <ul class="product_list">
+        <li class="product_list_item" *ngFor="let product of products">
+            <span> product: {{product.name}}, price: {{product.price}}, color: {{product.color}}, id: {{product.id}} </span> 
+            <button class="buy_button">Buy</button>
+            <br/>
+        </li>
+    </ul>
+</div>
