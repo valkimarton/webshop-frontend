@@ -2,10 +2,11 @@
 <div id="product_list_container">
     <h2>Shoes</h2>
     <ul class="product_list">
-        <li class="product_list_item" *ngFor="let product of products">
-            <span> product: {{product.name}}, price: {{product.price}}, color: {{product.color}}, id: {{product.id}} </span> 
-            <button class="buy_button">Buy</button>
-            <br/>
+        <li *ngFor="let product of products">
+            <div class="product_list_item">
+                <span> product: <a routerLink="/product/{{product.id}}"> {{product.name}}</a>, price: {{product.price}}, color: {{product.color}}, id: {{product.id}} </span> 
+                <button class="view_button" routerLink="/product/{{product.id}}">View</button>
+            </div>
         </li>
     </ul>
 </div>

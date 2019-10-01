@@ -4,11 +4,16 @@
 
 .product_list_item {
     font-size: 1.4em;
-    border: 2px solid red;
+    width: 50%;
+    height: 5em;
+    border: 2px solid blue;
+    margin-left: 15%;
+    padding: 0.5em;
 }
 
-.buy_button {
+.view_button {
     width: 5em;
     height: 2em;
     border-radius: 3px;
+    float: right
 }

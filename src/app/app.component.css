@@ -1,5 +1,51 @@
+/* ----  Inherited from original styles  ----  */
+
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #125699;
+}
+
+footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+}
+
+/* ------------------------- */
+
+
 #header_container {
     background-color: aliceblue;
+    clear: both;
 }
 
 #logo_main, #header_navbars {
@@ -26,10 +72,6 @@
     margin: 2em;
 }
 
-#random_h1 {
-    clear: left;
-}
-
-router-outlet {
-    clear: left;
+#router-outlet {
+    clear: both;
 }

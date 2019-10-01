@@ -1,0 +1,10 @@
+<div id="reviews_container">
+    <h3>Reviews</h3>
+    <ul class="review_list">
+        <li *ngFor="let review of reviews">
+            <div class="review_list_item">
+                <app-review-single [review]="review"></app-review-single>
+            </div>
+        </li>
+    </ul>
+</div>
