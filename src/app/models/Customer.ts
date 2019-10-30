@@ -1,6 +1,6 @@
-
 export class Customer {
     id: number;
+    username: string;
     firstName: string;
     lastName: string;
     dateOfBirth: Date;
