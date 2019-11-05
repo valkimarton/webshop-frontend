@@ -13,6 +13,8 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product;
 
+  quantityToBuy = 1;
+
   constructor(
     private route: ActivatedRoute,        // The ActivatedRoute holds information about the route
     private productService: ProductService,
@@ -33,7 +35,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addProductToCart(): void {
-    alert('Unimplemented');
+    alert('Under Implementation');
   }
 
 }

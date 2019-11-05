@@ -72,15 +72,13 @@ footer {
     margin: 2em;
 }
 
-#loginLink {
-    clear: both;
-    font-size:25px;
-    font-weight: bold;
-    padding-top: 10px;
+#login_block{
+    width: 15%;
+    clear: left;
+    border: 1px solid darkgray;
 }
 
 #router-outlet {
-    clear: both;
     padding-top: 15px;
     margin: 0 15% 0 15%;
 }

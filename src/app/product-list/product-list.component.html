@@ -4,8 +4,11 @@
     <ul class="product_list">
         <li *ngFor="let product of products">
             <div class="product_list_item">
-                <span> product: <a routerLink="/product/{{product.id}}"> {{product.name}}</a>, price: {{product.price}}, color: {{product.color}}, id: {{product.id}} </span> 
-                <button class="view_button" routerLink="/product/{{product.id}}">View</button>
+                <div> product: <a routerLink="/product/{{product.id}}"> {{product.name}}</a> </div>
+                <div> price: {{product.price}} </div>
+                <div> color: {{product.color}} </div>
+                <div> id: {{product.id}} </div> 
+                <button type="button" mdbBtn class="btn btn-primary view_product_button" routerLink="/product/{{product.id}}">View product</button>
             </div>
         </li>
     </ul>

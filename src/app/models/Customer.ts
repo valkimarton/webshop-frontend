@@ -1,3 +1,6 @@
+import { Address } from './Address';
+import { Cart } from './Cart';
+
 export class Customer {
     id: number;
     username: string;
@@ -6,6 +9,6 @@ export class Customer {
     dateOfBirth: Date;
     gender: string;
     email: string;
-    // address: Address;
-    // cart: Cart;
+    address: Address;
+    cart: Cart;
 }

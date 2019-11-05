@@ -1,0 +1,9 @@
+<ng-container *ngIf="authService.isLoggedOut(); else loggedInTemplate">
+    <a id="login-link" href="/login">Login</a>
+</ng-container>
+<ng-template #loggedInTemplate>
+    <div id="username">{{this.authService.getUserName()}}</div>
+    <div>Roles:  {{this.authService.getRoles()}}</div>
+    <div *ngIf="this.authService.getRoles().includes('ADMIN')"> GO TO ADMIN PAGE</div>
+</ng-template>
+

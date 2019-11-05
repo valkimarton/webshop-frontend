@@ -5,15 +5,13 @@
 .product_list_item {
     font-size: 1.4em;
     width: 50%;
-    height: 5em;
-    border: 2px solid blue;
+    border: 1px solid grey;
     margin-left: 15%;
     padding: 0.5em;
 }
 
-.view_button {
-    width: 5em;
-    height: 2em;
-    border-radius: 3px;
-    float: right
+.view_product_button {
+    float: right;
+    position: relative;
+    bottom: 2.5em;
 }

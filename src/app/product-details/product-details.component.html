@@ -6,7 +6,20 @@
     
     <button type="button" class="btn btn-success" (click)="goBack()">go back</button>
 
-    <button type="button" class="btn btn-success" (click)="addProductToCart()">Add to cart</button>
+    <div id="AddToCart_container" class="container">
+        <form id="addToCart-form" (ngSubmit)="addProductToCart()" #addToCartForm="ngForm">
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" required #quantityField="ngModel" [(ngModel)]="quantityToBuy" name="quantity" min="1" max="10">
+                <button id="addToCart-button" type="submit" class="btn btn-success" [disabled]="!addToCartForm.form.valid">ADD TO CART</button>
+            </div>
+            <div [hidden]="quantityField.valid"
+                class="alert alert-danger">
+                Quantity is required
+            </div>
+    
+        </form>
+    </div>
 
     <app-reviews [product]="product"></app-reviews>
 </div>

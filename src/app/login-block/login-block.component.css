@@ -1,0 +1,15 @@
+#login-link {
+    font-size:25px;
+    font-weight: bold;
+    color: blue;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+#username {
+    font-size:25px;
+    font-weight: bold;
+    color: darkblue;
+    padding: 1em 1em;
+    text-decoration: none;
+}

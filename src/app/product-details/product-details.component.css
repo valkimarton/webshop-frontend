@@ -3,11 +3,32 @@
 }
 
 div {
-    font-size: 1.5em;
-    margin: 1em;
+    font-size: 16px;
+    margin: 6px;
 }
 
 button {
     margin: 0.5em;
     font-size: 1em;
+}
+
+#AddToCart_container {
+    width: 300px;
+    float: right;
+    position: relative;
+    bottom: 40px;
+}
+
+#addToCart-form {
+
+}
+
+input {
+    width: 80px;
+}
+
+#addToCart-button {
+    float: right;
+    position: relative;
+    bottom: 45px;
 }

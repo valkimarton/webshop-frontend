@@ -1,0 +1,10 @@
+#reviews_container {
+    clear: both;
+    margin-left: 60px;
+}
+
+.review_list_item {
+    padding: 6px;
+    border-left: 2px solid green;
+    width: 80%;
+}
