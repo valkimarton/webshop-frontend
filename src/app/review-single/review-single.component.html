@@ -1,5 +1,6 @@
 <div class="single_review_container">
-    <span> <b>{{review.customer.firstName}} {{review.customer.lastName}}</b> </span> <br/>
+    <span> <b>{{review.customerName}}</b> </span> <br/>
     <span> {{review.grade}}/5 </span> <br/>
-    <span> {{review.content}} </span> <br/>
+    <span> {{review.content}} </span>
+    <span id="edit_review_button"><button *ngIf="authService.isAdmin()" (click)="editReview()" type="button" class="btn btn-warning" >EDIT</button></span>
 </div>

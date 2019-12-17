@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Registration</h1>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" required #username="ngModel" [(ngModel)]="customerModel.username" name="username">
+        </div>
+        <div [hidden]="username.valid || username.pristine"
+            class="alert alert-danger">
+            Username is required
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" required #password="ngModel" [(ngModel)]="customerModel.password" name="password">
+        </div>
+        <div [hidden]="password.valid || password.pristine"
+            class="alert alert-danger">
+            Password is required
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required #name="ngModel" [(ngModel)]="customerModel.name" name="name">
+        </div>
+        <div [hidden]="name.valid || name.pristine"
+            class="alert alert-danger">
+            Name is required
+        </div>
+
+        <div class="form-group">
+            <label for="zipCode">Zip code</label>
+            <input type="number" class="form-control" id="zipCode" #zipCode="ngModel" [(ngModel)]="customerModel.zipCode" name="zipCode">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" #country="ngModel" [(ngModel)]="customerModel.country" name="country">
+        </div>
+
+        <div class="form-group">
+            <label for="town">Town</label>
+            <input type="text" class="form-control" id="town" #town="ngModel" [(ngModel)]="customerModel.town" name="town">
+        </div>
+
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" class="form-control" id="street" #street="ngModel" [(ngModel)]="customerModel.street" name="street">
+        </div>
+
+        <div class="form-group">
+            <label for="houseNumber">House number</label>
+            <input type="number" class="form-control" id="houseNumber" #houseNumber="ngModel" [(ngModel)]="customerModel.houseNumber" name="houseNumber">
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
+
+        <br/> {{diagnostic}}
+        <br/> returnUrl: {{returnUrl}}
+        <br/> submitted: {{submitted}}
+
+    </form>
+</div>

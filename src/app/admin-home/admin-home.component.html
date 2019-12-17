@@ -1,0 +1,21 @@
+<h2>Admin Home Page</h2>
+<div id="admin_page_content" class="light-background" *ngIf="authService.isAdmin()">
+    <ngb-tabset >
+        <ngb-tab>
+            <ng-template ngbTabTitle><b>User</b></ng-template>
+            <ng-template ngbTabContent>
+                <div id="user_administration">
+                    Manage Users
+                </div>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+            <ng-template ngbTabTitle><b>Product</b></ng-template>
+            <ng-template ngbTabContent>
+                <div id="product_administration">
+                    Manage Products
+                </div>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>

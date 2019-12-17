@@ -44,12 +44,20 @@ footer {
 
 
 #header_container {
-    background-color: aliceblue;
+    background-color: rgb(28, 103, 168);
+    background-image: url("../assets/images/header-image.jpg");
     clear: both;
 }
 
-#logo_main, #header_navbars {
+#logo_main, #header_navbars_ {
     float: left;
+    background-color: transparent;
+}
+
+#header_navbars {
+    padding-left: 15%;
+    padding-top: 30px;
+    height: 150px;
 }
 
 #navbar_info {
@@ -58,27 +66,37 @@ footer {
 }
 
 .nav_info_item {
-    margin: 2em;
+    margin: 3em;
 }
 
-#navbar_shoes {
-    clear: left;
-    font-size: 3em;
-    text-align: center;
+#header_navbars a:visited, #header_navbars a.link, #header_navbars a.active {
+    color: white;
 }
 
 #cart_link {
-    float: right;
-    margin: 2em;
+    padding: 30px 0 0 30px;
+    width: 15%;
+    clear: left;
 }
 
 #login_block{
+    padding-top: 5px;
     width: 15%;
     clear: left;
-    border: 1px solid darkgray;
+    border: 5px outset #1A8CED;
+    border-radius: 10px;
+}
+
+.light-background {
+    background-color: whitesmoke;
 }
 
 #router-outlet {
-    padding-top: 15px;
+    width: 70%;
+    min-height: 85%;
+    padding: 15px 15px 15px 15px;
     margin: 0 15% 0 15%;
+    position: absolute;
+    top: 150px;
+    background-color: rgb(189, 224, 238);
 }

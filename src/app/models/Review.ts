@@ -3,8 +3,9 @@ import { Product } from './Product';
 
 export class Review {
     id: number;
-    customer: Customer;
-    product: Product;
+    customerId: number;
+    customerName: string;
+    productId: number;
     grade: number;
     content: string;
     date: Date;

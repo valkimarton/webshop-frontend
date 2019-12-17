@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -17,8 +18,16 @@ export class ProductService {
   };
 
   constructor(
-    private httpClient: HttpClient
-  ) { }
+    private httpClient: HttpClient,
+    private authService: AuthService
+  ) {
+    this.httpOptions = {
+      headers: new HttpHeaders({ 
+        'Content-Type': 'application/json',
+        Authorization: authService.getJwtTokenWithPrefix()
+      })
+    };
+  }
 
   getProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.productUrl, this.httpOptions);     // TODO: Error handling with catchError ?

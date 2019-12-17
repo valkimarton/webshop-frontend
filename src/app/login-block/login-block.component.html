@@ -1,9 +1,15 @@
 <ng-container *ngIf="authService.isLoggedOut(); else loggedInTemplate">
-    <a id="login-link" href="/login">Login</a>
+    <a  id="login-link" href="/login" >Log In</a> <br/>
+    <a  id="signup-link" href="/signup" >Sign Up</a>
 </ng-container>
 <ng-template #loggedInTemplate>
-    <div id="username">{{this.authService.getUserName()}}</div>
-    <div>Roles:  {{this.authService.getRoles()}}</div>
-    <div *ngIf="this.authService.getRoles().includes('ADMIN')"> GO TO ADMIN PAGE</div>
+    <div id="userdata">
+        <div id="username">{{this.authService.getUserName()}}</div>
+        <div>Roles:  {{this.authService.getRoles()}}</div>
+        <div *ngIf="this.authService.getRoles().includes('ADMIN')"> GO TO ADMIN PAGE</div>
+        <button id="logout_button" (click)="onSignOut()" type="button" class="btn btn-primary">Log out</button>
+        <button id="view_profile_button" routerLink="/customer/my_profile" type="button" class="btn btn-primary">Profile</button>
+        <button id="go_to_admin_page_button" routerLink="/admin_home" *ngIf="authService.isAdmin()" type="button" class="btn btn-warning">Admin</button>
+    </div>
 </ng-template>
 

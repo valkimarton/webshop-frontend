@@ -1,5 +1,13 @@
 .product-details {
-    border: 2px solid black;
+    padding: 20px;
+    border: 5px outset #1A8CED;
+    border-radius: 10px;
+}
+
+#product_data {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #eeeeee;
 }
 
 div {
@@ -16,11 +24,7 @@ button {
     width: 300px;
     float: right;
     position: relative;
-    bottom: 40px;
-}
-
-#addToCart-form {
-
+    bottom: 100px;
 }
 
 input {
@@ -31,4 +35,9 @@ input {
     float: right;
     position: relative;
     bottom: 45px;
+}
+
+app-reviews {
+    position: relative;
+    bottom: 20px;
 }

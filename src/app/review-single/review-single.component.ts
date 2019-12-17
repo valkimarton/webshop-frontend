@@ -1,5 +1,8 @@
+import { CustomerService } from './../customer.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Review } from '../models/Review';
+import { Customer } from '../models/Customer';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-review-single',
@@ -10,9 +13,19 @@ export class ReviewSingleComponent implements OnInit {
 
   @Input() review: Review;
 
-  constructor() { }
+  customer: Customer;
+
+  constructor(
+    private customerService: CustomerService,
+    private authService: AuthService
+  ) {
+   }
 
   ngOnInit() {
+  }
+
+  editReview() {
+    alert('Not implemented');
   }
 
 }

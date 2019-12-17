@@ -97,6 +97,13 @@ export class AuthService {
     return localStorage.getItem('token_roles');
   }
 
+  public isAdmin() {
+    if(this.getRoles() === undefined || this.getRoles() == null || this.getRoles().length == 0) {
+      return false;
+    }
+    return this.getRoles().includes('ADMIN');
+  }
+
   public getUserName(): string {
     return localStorage.getItem('token_sub');
   }
@@ -107,5 +114,9 @@ export class AuthService {
 
   public getJwtToken(): string {
     return localStorage.getItem('token');
+  }
+
+  public getJwtTokenWithPrefix(): string {
+    return 'Bearer ' + localStorage.getItem('token');
   }
 }

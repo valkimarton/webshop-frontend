@@ -4,23 +4,24 @@ import { Invoice } from './Invoice';
 
 export class ProductInCart {
     id: number;
-    product: Product;
+    productId: number;
+    productName: string;
     numberOfProducts: number;
     purchasePrice: number;
-    cart: Cart;
-    invoice: Invoice;
+    cartId: number;
+    invoiceId: number;
 
     constructor(
-        product: Product,
+        productId: number,
         numberOfProducts: number,
         purchasePrice: number,
-        cart: Cart,
-        invoice: Invoice
+        cartId: number,
+        invoiceId: number
     ) {
-        this.product = product;
+        this.productId = productId;
         this.numberOfProducts = numberOfProducts;
         this.purchasePrice = purchasePrice;
-        this.cart = cart;
-        this.invoice = invoice;
+        this.cartId = cartId;
+        this.invoiceId = invoiceId;
         }
 }

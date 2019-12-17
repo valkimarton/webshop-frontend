@@ -21,6 +21,12 @@ export class CartService {
     private http: HttpClient
   ) {
     this.cartUrl = environment.apiBaseUrl + '/customer/' + authService.getUserId() + '/cart/product_in_cart';
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: authService.getJwtTokenWithPrefix()
+      })
+    };
   }
 
   addProductInCartToCart(productInCart: ProductInCart): void {

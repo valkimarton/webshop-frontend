@@ -1,10 +1,17 @@
-<div class="product-details" *ngIf="product">
+<div class="product-details light-background" *ngIf="product">
 
-    <h2>{{product.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{product.id}}</div>
-    <div><span>name: </span>{{product.name}}</div>
+    <div id="product_data">
+        <h2>{{product.name | uppercase}} Details </h2>
+        <div><span>id: </span>{{product.id}}</div>
+        <div><span>name: </span>{{product.name}}</div>
+        <div><span>price: </span>{{product.price}} HUF</div>
+        <div><span>color: </span>{{product.color}}</div>
+        <div><span>manufacturer: </span>{{product.manufacturerName}}</div>
+        
+        <button type="button" class="btn btn-primary" (click)="goBack()">BACK</button>
+        <button *ngIf="authService.isAdmin()" (click)="editProduct()" type="button" class="btn btn-warning" >EDIT</button>
+    </div>
     
-    <button type="button" class="btn btn-success" (click)="goBack()">go back</button>
 
     <div id="AddToCart_container" class="container">
         <form id="addToCart-form" (ngSubmit)="addProductToCart()" #addToCartForm="ngForm">

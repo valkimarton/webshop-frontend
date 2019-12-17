@@ -1,10 +1,12 @@
 #reviews_container {
     clear: both;
-    margin-left: 60px;
+    margin-left: 30px;
+    
 }
 
 .review_list_item {
     padding: 6px;
-    border-left: 2px solid green;
+    border-left: 4px solid blue;
     width: 80%;
+    border-radius: 4px;
 }

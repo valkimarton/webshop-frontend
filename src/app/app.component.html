@@ -1,53 +1,38 @@
 
 <header id="header_container">
   <a id="main_logo_link" href="">
-    <img id="logo_main" width="150px" height="150px" alt="Logo" src="https://cdn2.vectorstock.com/i/1000x1000/37/81/shoes-running-pictogram-vector-12083781.jpg"/>
+    <img id="logo_main" width="200px" height="150px" alt="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSgstzXGGUkTLfO4R2hGBkNWxqrTSJpgrG8Co_3LshLdDr1_4jZ"/>
   </a>
 
   <div id="header_navbars">
     <nav id="navbar_info" class="navbar">
       <ul class="nav_info_list">
         <li class="nav_info_item">
-          <a class="nav_info_link" href="">News</a>
+          <a class="nav_info_link" href="">NEWS</a>
         </li>
         <li class="nav_info_item">
-          <a class="nav_info_link" href="">Products</a>
+          <a class="nav_info_link" href="">PRODUCTS</a>
         </li>
         <li class="nav_info_item">
-          <a class="nav_info_link" href="">Contacts</a>
+          <a class="nav_info_link" href="">CONTACTS</a>
         </li>
         <li class="nav_info_item">
-          <a class="nav_info_link" href="">About Us</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav id="navbar_shoes" class="navbar">
-      <ul class="nav_shoes_list">
-        <li class="nav_shoes_item">
-          <a class="nav_shoes_link" href="">Adidas</a>
-        </li>
-        <li class="nav_shoes_item">
-          <a class="nav_shoes_link" href="">Nike</a>
-        </li>
-        <li class="nav_shoes_item">
-          <a class="nav_shoes_link" href="">Puma</a>
-        </li>
-        <li class="nav_shoes_item">
-          <a class="nav_shoes_link" href="">Skechers</a>
+          <a class="nav_info_link" href="">ABOUT US</a>
         </li>
       </ul>
     </nav>
   </div>
 
-  <a id="cart_link" href="">
-    <img width="50px" height="50px" alt="Cart" src="https://static.thenounproject.com/png/1230-200.png"/>
-  </a>
-
 </header>
 
-<div id="login_block">
+<div id="login_block" >
   <app-login-block></app-login-block>
+</div>
+
+<div id="cart_link">
+  <a href="cart/{{userId}}">
+    <img width="50px" height="50px" alt="Cart" src="https://static.thenounproject.com/png/1230-200.png"/>
+  </a>
 </div>
 
 <div id="router-outlet">

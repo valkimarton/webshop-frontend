@@ -17,4 +17,8 @@ export class LoginBlockComponent implements OnInit {
     console.log(this.authService.getExpiration());
   }
 
+  onSignOut(): void {
+    this.authService.logout();
+  }
+
 }

@@ -1,15 +1,22 @@
-#login-link {
+#login-link, #signup-link{
     font-size:25px;
     font-weight: bold;
     color: blue;
-    padding: 1em 1em;
+    margin: 1em 1em;
     text-decoration: none;
+}
+
+#userdata {
+    padding: 1em 1em;
 }
 
 #username {
     font-size:25px;
     font-weight: bold;
     color: darkblue;
-    padding: 1em 1em;
     text-decoration: none;
+}
+
+#view_profile_button {
+    margin: 10px;
 }

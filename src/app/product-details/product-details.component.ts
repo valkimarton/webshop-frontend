@@ -1,8 +1,11 @@
+import { ProductInCartService } from './../product-in-cart.service';
+import { ProductInCart } from './../models/ProductInCart';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Product } from '../models/Product';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-product-details',
@@ -18,7 +21,9 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,        // The ActivatedRoute holds information about the route
     private productService: ProductService,
-    private location: Location
+    private productInCartService: ProductInCartService,
+    private location: Location,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -35,7 +40,23 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addProductToCart(): void {
-    alert('Under Implementation');
+    const productInCart = new ProductInCart(
+      this.product.id,
+      this.quantityToBuy,
+      this.product.price,
+      null,
+      null
+    );
+
+    this.productInCartService.addProductInCartToCart(productInCart).subscribe(productInCart => {
+      console.log(productInCart);
+    });
+
+    alert('Product added to cart');
+  }
+
+  editProduct() {
+    alert('Not implemented');
   }
 
 }

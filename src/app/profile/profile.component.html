@@ -1,0 +1,48 @@
+<div id="profile_container" *ngIf="customer; else elseTemplateProfile" class="light-background">
+    <h1>My Profile</h1>
+    <br>
+    <ul>
+        <li>username: <b>{{customer.username}}</b></li><br>
+        <li>name: <b>{{customer.name}}</b></li><br>
+        <li>email: <b>{{customer.email}}</b></li><br>
+        <li>date of birth: <b>{{customer.dateOfBirth}}</b></li><br>
+        <li>address:
+            <ul>
+                <li>country: <b>{{customer.address.country}}</b></li><br>
+                <li>zip code: <b>{{customer.address.zipCode}}</b></li><br>
+                <li>town: <b>{{customer.address.town}}</b></li><br>
+                <li>street: <b>{{customer.address.street}}</b></li><br>
+                <li>house number: <b>{{customer.address.houseNumber}}</b></li><br>
+            </ul>
+        </li><br>
+    </ul>
+    <div id="profile_invoices">
+        
+        <div id="invoice_container" *ngIf="invoicesShown">
+            <h2>Invoices</h2>
+            <div id="invoice_list">
+                <ul>
+                    <li *ngFor="let invoice of invoices | keyvalue">
+                        <div id="invoice_list_item" class="light-background">
+                            Invoice ID: <b>{{invoice.key}}</b>
+                            <ul>
+                                <li *ngFor="let product of invoice.value" >
+                                    <span>product: <b>{{product.productName}}</b></span>
+                                    <span class="tab">purchase price: <b>{{product.purchasePrice}}</b></span>
+                                    <span class="tab">quantity: <b>{{product.numberOfProducts}}</b></span>
+                                    <br>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="toggle_invoices_button" type="button" class="btn btn-primary" (click)="toggleInvoices()">Show invoices</button>
+    </div>
+</div>
+
+<ng-template #elseTemplateProfile>
+    <b>Your are not logged in</b>
+</ng-template>
+

@@ -1,15 +1,18 @@
 
 <div id="product_list_container">
-    <h2>Shoes</h2>
-    <ul class="product_list">
-        <li *ngFor="let product of products">
-            <div class="product_list_item">
-                <div> product: <a routerLink="/product/{{product.id}}"> {{product.name}}</a> </div>
-                <div> price: {{product.price}} </div>
-                <div> color: {{product.color}} </div>
-                <div> id: {{product.id}} </div> 
-                <button type="button" mdbBtn class="btn btn-primary view_product_button" routerLink="/product/{{product.id}}">View product</button>
-            </div>
-        </li>
-    </ul>
+    <div id="product_list_header"><h2><b>SHOES</b></h2></div>
+    <div id="product_list">
+        <ul>
+            <li *ngFor="let product of products">
+                <div class="product_list_item light-background ">
+                    <div> product: <a routerLink="/product/{{product.id}}"> {{product.name}}</a> </div>
+                    <div> manufacturer: {{product.manufacturerName}} </div>
+                    <div> price: <b>{{product.price}} HUF</b> </div>
+                    <div> color: {{product.color}} </div>
+                    <div> id: {{product.id}} </div> 
+                    <button type="button" mdbBtn class="btn btn-primary view_product_button" routerLink="/product/{{product.id}}">View product</button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

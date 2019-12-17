@@ -7,6 +7,7 @@ export class Product {
     price: number;
     category: string;
     color: string;
-    manufacturer: Manufacturer;
-    reviews: Review[];
+    manufacturerId: number;
+    manufacturerName: string;
+    reviewIds: number[];
 }

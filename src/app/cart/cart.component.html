@@ -1,0 +1,24 @@
+<div id="cart_container">
+    <div id="cart_header"><h2><b>MY CART</b></h2></div>
+    <div id="product_in_cart_list">
+        <ul>
+            <li *ngFor="let productInCart of productInCarts">
+                <div class="productIC_list_item light-background ">
+                    <span><a routerLink="/product/{{productInCart.productId}}"> <b>{{productInCart.productName}}</b></a> &emsp;</span>
+                    <div>
+                        <span>item price: {{productInCart.purchasePrice}} HUF </span><br/>
+                        <span> quantity: {{productInCart.numberOfProducts}} </span><br/>
+                        <span>total price: <b>{{getItemTotalPrice(productInCart)}}</b> HUF</span>
+                    </div>
+                    <span id="view_product_button_cart"><button type="button" mdbBtn class="btn btn-primary cart_item_button" routerLink="/product/{{productInCart.productId}}">View product</button></span>
+                    <span id="remove_from_cart_button"><button type="button" mdbBtn class="btn btn-primary cart_item_button" (click)="removeProductInCart(productInCart.id)">Remove</button></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="productInCarts!=null && productInCarts != []">
+        <span id="buy_cart_items_button"><button type="button" mdbBtn class="btn btn-primary cart_item_button" (click)="buyProducts()">Buy products</button></span>
+        <div id="total_price">Total price: <b>{{getTotalPrice(productnCarts)}}</b> HUF</div>
+    </div>
+    
+</div>

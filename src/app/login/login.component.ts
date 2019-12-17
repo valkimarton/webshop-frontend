@@ -24,19 +24,15 @@ export class LoginComponent implements OnInit {
     private authService: AuthService
 ) {
     // redirect to home if already logged in
-    /*
-    if (this.authenticationService.currentUserValue) { 
+    if (this.authService.isLoggedIn()) {
         this.router.navigate(['/']);
     }
-    */
 }
 
   ngOnInit() {
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'; //TODO: this.router.navigate(['login'], { queryParams: { returnUrl: state.url }}); ahonnan átnavigálok a loginhoz.
   }
-
-  onReset(): void { this.userModel = new UserLogin('newUserName', 'newPW'); }
 
   onSubmit() {
     this.submitted = true;
